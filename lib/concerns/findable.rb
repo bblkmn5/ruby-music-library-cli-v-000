@@ -1,4 +1,5 @@
 module Concerns::Findable
+  module ClassMethods
     def find_by_name(name)
       all.find{ |instance| instance.name == name}
     end
@@ -6,4 +7,6 @@ module Concerns::Findable
     def find_or_create_by_name(name)
       find_by_name(name) || create(name)
     end
+  end
+  
 end
