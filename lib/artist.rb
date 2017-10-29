@@ -29,7 +29,9 @@ class Artist
   end
 
   def add_song(song)
+#assigns current artist to song's 'artist' property (song belongs to artist), does not add if song already there
     song.artist = self unless song.artist
+#adds the song to the current artist's 'songs' collection, does not add if song is already there
     songs << song unless songs.include?(song)
   end
 
