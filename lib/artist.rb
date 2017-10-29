@@ -8,6 +8,7 @@ class Artist
 #accepts a name for the new artist
   def initialize(name)
     @name = name
+#creates songs property set to empty array (artist has many songs)
     @songs = []
   end
 #returns the class variable @@all
