@@ -23,7 +23,7 @@ class MusicLibraryController
       puts "What would you like to do?"
 #asks the user for input
       input = gets.strip
-
+#CLI Commands for each user input 
       case input
       when 'list songs'
         list_songs
