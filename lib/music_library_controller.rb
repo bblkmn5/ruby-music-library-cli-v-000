@@ -63,6 +63,7 @@ class MusicLibraryController
   end
 
   def list_songs_by_artist
+#prompts user to enter an artist
     puts "Please enter the name of an artist:"
     input = gets.strip
 
