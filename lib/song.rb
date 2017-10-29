@@ -39,8 +39,9 @@ class Song
   def self.create(name)
     Song.new(name).tap{ |s| s.save}
   end
-#finds a song instance in @@all by the name property of the song
+
   def self.find_by_name(name)
+#finds a song instance in @@all by the name property of the song
     all.find{|song| song.name == name}
   end
 
