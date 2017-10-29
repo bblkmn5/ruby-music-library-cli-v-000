@@ -44,8 +44,9 @@ class Song
 #finds a song instance in @@all by the name property of the song
     @@all.find{|song| song.name == name}
   end
-
+#returns (not recreates) existing song with provided name if one exists in @@all 
   def self.find_or_create_by_name(name)
+#invokes .find_by_name(name) OR .create(name) instead of re-coding
     find_by_name(name) || create(name)
   end
 
