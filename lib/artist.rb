@@ -22,7 +22,7 @@ class Artist
   def save
     @@all << self
   end
-
+#initializes and saves the artist
   def self.create(name)
     Artist.new(name).tap{ |n| n.save}
   end
