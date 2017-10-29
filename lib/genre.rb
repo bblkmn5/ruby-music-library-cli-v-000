@@ -3,14 +3,14 @@ class Genre
 
   attr_accessor :name
   attr_reader :songs
-
+#is initialized as an empty array
   @@all = []
-
+#accepts a name for the new genre
   def initialize(name)
     @name = name
     @songs = []
   end
-
+#returns the class variable @@all
   def self.all
     @@all
   end
