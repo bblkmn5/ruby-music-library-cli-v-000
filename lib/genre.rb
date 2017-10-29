@@ -8,6 +8,7 @@ class Genre
 #accepts a name for the new genre
   def initialize(name)
     @name = name
+#creates song property set to empty array (genre has many songs)
     @songs = []
   end
 #returns the class variable @@all
