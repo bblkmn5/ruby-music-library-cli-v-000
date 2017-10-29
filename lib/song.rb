@@ -4,13 +4,13 @@ class Song
   attr_reader :artist, :genre
 #is initialized as an empty array
   @@all = []
-#accepts a name for the new song
+#accepts a name for the new song, optional second argument, Artist to be assigned the song's 'artist' property (artist has many songs)
   def initialize(name, artist = nil, genre = nil)
     @name = name
     self.artist = artist if artist
     self.genre = genre if genre
   end
-
+#assigns an artist to the song (song belongs to artist)
   def artist=(artist)
     @artist = artist
     artist.add_song(self)
