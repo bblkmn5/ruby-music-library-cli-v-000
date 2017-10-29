@@ -18,7 +18,9 @@ class Song
   end
 
   def genre=(genre)
+#assigns a genre to the song (song belongs to genre)
     @genre = genre
+#adds the song to the genre's collection of songs (genre has many songs), does not add if genre's collection of songs already exists
     genre.songs << self unless genre.songs.include?(self)
   end
 #returns the class variable @@all
