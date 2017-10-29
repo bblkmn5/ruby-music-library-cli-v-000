@@ -80,7 +80,7 @@ class MusicLibraryController
     puts "Please enter the name of a genre:"
 #accepts user input
     input = gets.strip
-
+#prints all songs by a particular genre in a numbered list (alphabetized by song name) (does nothing IF no matching genre found)
     if genre = Genre.find_by_name(input)
       genre.songs.sort{|a,b| a.name <=> b.name}.each.with_index(1) do |song, index|
         puts "#{index}. #{song.artist.name} - #{song.name}"
