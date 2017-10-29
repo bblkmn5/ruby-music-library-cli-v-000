@@ -34,8 +34,9 @@ class Artist
 #adds the song to the current artist's 'songs' collection, does not add if song is already there
     songs << song unless songs.include?(song)
   end
-
+#returns a collection of genres for all of the artist's songs (artist has many songs)
   def genres
+#collects genres through its songs instead of maintaining its own @genres instance (artist has many genres through songs), does not return duplicate genres
     songs.collect { |song| song.genre}.uniq
   end
 
