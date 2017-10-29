@@ -13,6 +13,7 @@ class Song
 #assigns an artist to the song (song belongs to artist)
   def artist=(artist)
     @artist = artist
+#invokes Artist#add_song to add itself to artist's collection of songs (artist has many songs)
     artist.add_song(self)
   end
 
