@@ -14,15 +14,15 @@ class Genre
   def self.all
     @@all
   end
-
+#resets the @@all class variable to an empty array
   def self.destroy_all
     @@all.clear
   end
-
+#adds the Genre instance to the @@all class variable
   def save
     @@all << self
   end
-
+#initializes and saves the genre
   def self.create(name)
     Genre.new(name).tap { |g| g.save}
   end
