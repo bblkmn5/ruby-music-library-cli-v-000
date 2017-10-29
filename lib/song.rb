@@ -32,7 +32,7 @@ class Song
   def save
     @@all << self
   end
-
+#initializes and saves the song
   def self.create(name)
     Song.new(name).tap{ |s| s.save}
   end
