@@ -27,8 +27,9 @@ class Genre
   def self.create(name)
     Genre.new(name).tap { |g| g.save}
   end
-
+#returns a collection of artists for all of the genre's songs (genre has many artists)
   def artists
+#collects artists through its songs instead of maintaining its own @artists instance variable (genre has many artists through songs)
     songs.collect{|song| song.artist}.uniq
   end
 end
